@@ -12,6 +12,9 @@
 #include <cppunit/TestResultCollector.h>
 #include <cppunit/TestRunner.h>
 
+#include <cppunit/XmlOutputter.h>
+#include <ostream>
+
 int main() {
     // Create the event manager and test controller
     CPPUNIT_NS::TestResult controller;
@@ -31,7 +34,13 @@ int main() {
 
     // Print test in a compiler compatible format.
     CPPUNIT_NS::CompilerOutputter outputter(&result, CPPUNIT_NS::stdCOut());
-    outputter.write();
-
+   outputter.write();
+    
+    // Print test in a Jenkins compatible format.
+        std::ofstream xmlFileOut("cpptestresults.xml");
+        CPPUNIT_NS::XmlOutputter xmlOut(&result, xmlFileOut);
+        xmlOut.write();
+    
+    
     return result.wasSuccessful() ? 0 : 1;
 }
