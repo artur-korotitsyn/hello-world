@@ -20,6 +20,7 @@ int main(int argc, char** argv)
     Helloer helloer("World");
     cout << helloer.message() << endl;
     cin.get();
+  //  system("pause");
     return 0;
 }
 
