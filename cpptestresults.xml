@@ -1,27 +1,18 @@
 <?xml version="1.0" encoding='ISO-8859-1' standalone='yes' ?>
 <TestRun>
-  <FailedTests>
-    <FailedTest id="2">
-      <Name>Helloertest::testMessageNobody</Name>
-      <FailureType>Assertion</FailureType>
-      <Location>
-        <File>tests/Helloertest.cpp</File>
-        <Line>38</Line>
-      </Location>
-      <Message>assertion failed
-- Expression: result == &quot;&quot;
-</Message>
-    </FailedTest>
-  </FailedTests>
+  <FailedTests></FailedTests>
   <SuccessfulTests>
     <Test id="1">
       <Name>Helloertest::testMessage</Name>
     </Test>
+    <Test id="2">
+      <Name>Helloertest::testMessageNobody</Name>
+    </Test>
   </SuccessfulTests>
   <Statistics>
     <Tests>2</Tests>
-    <FailuresTotal>1</FailuresTotal>
+    <FailuresTotal>0</FailuresTotal>
     <Errors>0</Errors>
-    <Failures>1</Failures>
+    <Failures>0</Failures>
   </Statistics>
 </TestRun>
